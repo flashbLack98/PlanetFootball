@@ -5,14 +5,16 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TextInput,
   useColorScheme,
   View,
 } from 'react-native';
@@ -24,6 +26,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import Login  from './components/login/Login';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -55,8 +59,6 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
- 
-
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -78,7 +80,7 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
+          {/* <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
@@ -90,8 +92,11 @@ function App(): JSX.Element {
           </Section>
           <Section title="Learn More">
             Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          </Section> */}
+          {/* <LearnMoreLinks /> */}
+
+          <Login/>
+          
         </View>
       </ScrollView>
     </SafeAreaView>
