@@ -21,7 +21,7 @@ import {
   Colors
 } from 'react-native/Libraries/NewAppScreen';
 
-import CreatePost from './components/inputText/CreatePost';
+import CreatePost from './components/createPost/CreatePost';
 import Post from './components/post/Post';
 
 type SectionProps = PropsWithChildren<{
