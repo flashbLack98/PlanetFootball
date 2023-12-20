@@ -7,13 +7,33 @@ export default function Login (){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
   
-    const handleLogin = () => {
+    const handleLogin = async () => {
       // Qui potresti implementare la logica di autenticazione
       console.log('Username:', username);
       console.log('Password:', password);
       // Aggiungi qui la logica per verificare le credenziali e autenticare l'utente
 
-      
+      try {
+        // Simula una richiesta asincrona ritardata
+        await new Promise(resolve => setTimeout(resolve, 1000));
+  
+        // Simula una risposta mock con dati
+        const mockResponse = {
+          data: {
+            userId: 123,
+            username: 'utente123',
+            token: 'tokenDiAccesso',
+          },
+        };
+  
+        // Esegue la gestione dei dati della risposta
+        console.log('Dati della risposta:', mockResponse.data);
+  
+        // Aggiungi qui la logica per verificare le credenziali e autenticare l'utente
+      } catch (error) {
+        console.error('Errore durante la richiesta di login:', error);
+      }
+
     };
     
     return(

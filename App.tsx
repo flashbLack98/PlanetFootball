@@ -5,29 +5,25 @@
  * @format
  */
 
-import React, { useState } from 'react';
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
+import React from 'react';
 import {
-  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  TextInput,
   useColorScheme,
-  View,
+  View
 } from 'react-native';
 
 import {
   Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
+  Header
 } from 'react-native/Libraries/NewAppScreen';
 
-import Login  from './components/login/Login';
+import Login from './components/login/Login';
+import Post from './components/post/Post';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -75,7 +71,7 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        {/* <Header /> */}
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
@@ -95,7 +91,9 @@ function App(): JSX.Element {
           </Section> */}
           {/* <LearnMoreLinks /> */}
 
-          <Login/>
+          {/* <Login/> */}
+
+          <Post/>
           
         </View>
       </ScrollView>
